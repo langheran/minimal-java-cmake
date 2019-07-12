@@ -9,6 +9,8 @@ project (HelloWorld NONE)
 
 set(CMAKE_JAVA_COMPILE_FLAGS "-source" "1.6" "-target" "1.6")
 
+unset(ENV{_JAVA_OPTIONS})
+
 add_jar(HelloWorld HelloWorld.java ENTRY_POINT HelloWorld)
 
 get_target_property(_jarFile HelloWorld JAR_FILE)
